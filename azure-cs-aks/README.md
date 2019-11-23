@@ -35,6 +35,8 @@ To deploy your infrastructure, follow the below steps.
     $ pulumi up
     ```
 
+_NOTE: There is a [known issue](https://github.com/pulumi/examples/issues/480) with the timing of a service principal being created, so you may encounter an error the first time you run `pulumi up`. The workaround for this is simply to run `pulumi up` again. Usually, by the time you run it the second time, the service principal will finish being created._
+
 5. After 10-15 minutes, your cluster will be ready, and the kubeconfig YAML you'll use to connect to the cluster will be available as an output. You can save this kubeconfig to a file like so:
 
     ```bash
